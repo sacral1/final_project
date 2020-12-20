@@ -6,21 +6,25 @@ pygame.init()
 clock = pygame.time.Clock()
 fps = 60
 
-screen_width = 700
-screen_height = 700
+screen_width = 600
+screen_height = 600
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Platformer')
 
 #define game variables
-tile_size = 35
+tile_size = 30
 game_over = 0
+main_menu = True
 
 
 #load images
 sun_img = pygame.image.load('images/sun.png')
-bg_img = pygame.image.load('images/sky.png')
+bg_img = pygame.image.load('images/7.jpg')
 restart_image = pygame.image.load('images/restart_btn.png')
+start_img = pygame.image.load('images/start_btn.png')
+exit_img = pygame.image.load('images/exit_btn.png')
+
 
  
 class Button():
@@ -176,7 +180,7 @@ class World():
 
 		#load images
 		dirt_img = pygame.image.load('images/dirt.png')
-		grass_img = pygame.image.load('images/grass.png')
+		grass_img = pygame.image.load('images/10.png')
 
 		row_count = 0
 		for row in data:
@@ -255,8 +259,8 @@ world_data = [
 [1, 0, 0, 2, 0, 0, 4, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 0, 0, 1], 
 [1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1], 
 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], 
-[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 7, 0, 0, 0, 0, 2, 0, 1], 
-[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], 
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 7, 0, 0, 0, 0, 0, 0, 1], 
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1], 
 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 2, 2, 2, 2, 2, 1], 
 [1, 0, 0, 0, 0, 0, 2, 2, 2, 6, 6, 6, 6, 6, 1, 1, 1, 1, 1, 1], 
 [1, 0, 0, 0, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 
@@ -274,31 +278,38 @@ lava_group = pygame.sprite.Group()
 world = World(world_data)
 
 restart_button = Button(screen_width // 2 - 50, screen_height // 2, restart_image)
+start_button = Button(screen_width // 2 - 280, screen_height // 3, start_img)
+exit_button = Button(screen_width // 2 + 50, screen_height // 3, exit_img)
 
 
 run = True
 while run:
  	
 		clock.tick(fps)
+
 		screen.blit(bg_img, (0, 0))
 		screen.blit(sun_img, (100, 100))
 
-		world.draw()
+		if main_menu == True:
+			if exit_button.draw():
+				run = False
+			if start_button.draw():
+				main_menu = False
+		else:
+			world.draw()
 
-		if game_over == 0:
-			blob_group.update()
+			if game_over == 0:
+				blob_group.update()
 
-		blob_group.draw(screen)
-		lava_group.draw(screen)
+			blob_group.draw(screen)
+			lava_group.draw(screen)
 
-		game_over = player.update(game_over)
+			game_over = player.update(game_over)
 
-		if game_over == -1:
-			if restart_button.draw():
-				player.reset(100, screen_height - 115)
-				game_over = 0
-
-
+			if game_over == -1:
+				if restart_button.draw():
+					player.reset(100, screen_height - 115)
+					game_over = 0
 
 
 		for event in pygame.event.get():
