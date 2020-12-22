@@ -51,3 +51,15 @@ I really enjoy playing this kind of games - it has an infinite number of advanta
 In my opinion it is a graet job, cause it is easy to control the player and get the finish door. Also it has several levels according to hardness , so that you will not get bored. It made me remember my childhood. (Abykaev Dastan)
 
 As a child, I often played platformer games with my dad, for me it was the coolest game at that time. Even though the idea is really simple, it’s a really cool concept.This game is honestly the best 2D game I have ever played. Thanks Sacral (dongolok) for her hard work. (Amir Alimzhanov)
+
+I played this game. It is  really well made and interesting game, there is no bugs, no crashes. The game looks nice and it's controls are comfortable. Also you can track your progress with score. So I enjoyed of this project. (Islam Sydykov)
+
+the game is really good. There are no colors in the game that could bother the player. I don't see any violations on the part of the Creator. Also the game is fascinating. And this little Ghost, so cute.(LyaLya - Asel Abdrakhmanova)
+
+Omg, firstly i want to say, is that game done very nice and cute. I liked so much selected sprites, they fit very awesome. Secondly, creativity of Nuriza surprized me, it is not simple snake or space war game which do every second guy, it is really 2d full game, ready for uploading. I like the idea, I like the realization. Everything works perfect and well-balanced. In my opinion, it is the best game project, that I ever seen in University. Moreover I like the levels realization, I thought it will be only 1 level game, but there were morem than I expected what also surprized me. Nice job done by Nuriza. Cool project! (Junesqo - genius of our faculty) 
+
+I like her project because when I was a child, I always played Mario game and when I saw Nuriza’s game it reminded me my childhood. Her game is clear and comfortable, I played her game around 5-8 times. I think this game is cool for starting game developer. (Medina Isabekova - faculty president)
+
+
+## Video presentation
+https://www.youtube.com/watch?v=Uz2B14V8GQU&feature=youtu.be
