@@ -61,5 +61,4 @@ Omg, firstly i want to say, is that game done very nice and cute. I liked so muc
 I like her project because when I was a child, I always played Mario game and when I saw Nuriza’s game it reminded me my childhood. Her game is clear and comfortable, I played her game around 5-8 times. I think this game is cool for starting game developer. (Medina Isabekova - faculty president)
 
 
-## Video presentation
-https://www.youtube.com/watch?v=Uz2B14V8GQU&feature=youtu.be
+ 
